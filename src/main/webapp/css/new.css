@@ -1,0 +1,47 @@
+
+
+ 
+
+.input_label {
+    -moz-border-radius: 5px 0 0 5px;
+    -webkit-border-radius: 5px 0 0 5px;
+    background:white;
+    border: 1px solid #CCC;
+    border-radius: 5px 0 0 5px;
+    border-right: 1px solid #FFF;
+    display: inline-block;
+    height: 41px;
+    width: 275px;
+    line-height: 36px;
+    margin-right: 0;
+    width: 150px !important;
+	
+}
+
+#contact input[type=text] {
+    -moz-border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;
+    background: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 0 5px 5px 0;
+    color: #333;
+    font: 13px/1.6 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+    height: 46px;
+    line-height: 36px;
+    margin: 0 8px 0 -5px;
+    outline: none;
+    padding: 0 3px;
+    width: 300px;
+}
+
+.user label {
+    background: url('image/6.png') 15px center no-repeat;
+	}
+
+label {
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 0 0 30px;
+}
+

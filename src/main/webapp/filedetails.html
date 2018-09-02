@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<script src="js/angular.min.js"></script>
+		<script src="js/app.js"></script>
+		<style> 
+			.input_label {
+			    -moz-border-radius: 5px 0 0 5px;
+			    -webkit-border-radius: 5px 0 0 5px;
+			    background:white;
+			    border: 1px solid #CCC;
+			    border-radius: 5px 0 0 5px;
+			    border-right: 1px solid #FFF;
+			    display: inline-block;
+			    height: 41px;
+			    width: 275px;
+			    line-height: 36px;
+			    margin-right: 0;
+			    width: 150px !important;
+				
+			}
+			
+			#contact input[type=text] {
+			    -moz-border-radius: 0 5px 5px 0;
+			    -webkit-border-radius: 0 5px 5px 0;
+			    background: #FFF;
+			    border: 1px solid #CCC;
+			    border-radius: 0 5px 5px 0;
+			    color: #333;
+			    font: 13px/1.6 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+			    height: 46px;
+			    line-height: 36px;
+			    margin: 0 8px 0 -5px;
+			    outline: none;
+			    padding: 0 3px;
+			    width: 300px;
+			}
+			
+			.user label {
+			    background: url('image/13.jpg') 15px center no-repeat;
+				}
+			.user1 label {
+			    background: url('image/11.png') 15px center no-repeat;
+				}
+			.user2 label {
+			    background: url('image/file.png') 15px center no-repeat;
+				}
+			.user3 label {
+			    background: url('image/cal.jpg') 15px center no-repeat;
+				}
+			
+			label {
+			    display: block;
+			    height: 36px;
+			    line-height: 36px;
+			    padding: 0 0 0 30px;
+			}
+		</style> 
+	</head>
+	<body>
+		<img src="image/16.png" style="float:right; cursor:pointer" "margin-right:2px" value="Home" onclick="window.location.href='distributerpage.html'" >
+		<div id="form" ng-app = "mainApp" ng-controller = "filesListController">
+			<div id="contact"> 
+		        <div class="input_label user">
+		            <label for="name">  File Name</label>{{filesList1.filename}}
+		         </div>
+			</div><br> 
+			<div id="contact"> 
+	        	<div class="input_label user"></style> 
+	            	<label for="name">Subject</label>{{files.subject}}
+	            </div>
+	    	</div><br> 
+			<div id="contact"> 
+	        	<div class="input_label user3"> 
+	            	<label for="name">Date</label>{{files.date}}
+	            </div>
+	    	</div><br> 
+			<div id="contact"> 
+	        	<div class="input_label user1"> 
+	            	<label for="name">File Type</label>{{files.filetype}}
+	            </div>
+			</div><br> 
+			<div id="contact">
+	        	<div class="input_label user2"> 
+	            	<label for="name">Size</label>{{files.size}}
+	            </div> 
+	    	</div>
+	    	<br> <br> <br> <br> <br> 
+			<input id="t1" type="button" style="margin-left:430px; cursor:pointer" value="Download" onclick="window.location.href='#'">
+			<img src="image/l2.png" style="margin-left:200px; cursor:pointer" onclick="window.location.href='otp-unlockfile.html'" >
+			<img src="image/l1.png" style="margin-right:200px; cursor:pointer" "margin-top:50px;" onclick="window.location.href='otp-lockfile.html'" >
+		</div> 
+	</body>
+</html>

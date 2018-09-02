@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Properties>
+		<Property name="log-path">/logs</Property>
+	</Properties>
+	
+	<Appenders>
+		<Console name="console-log" target="SYSTEM_OUT">
+			<PatternLayout pattern="[%-5level] %d{yyyy-MM-dd-HH-mm-ss-SSS} [%t] %c %L- %msg%n" />
+		</Console>
+		
+		<RollingFile name="rolling-log" fileName="logs/dld.log" filePattern="logs/dld-%d{yyyy-MM-dd}-%i.log">
+			<PatternLayout pattern="[%-5level] %d{yyyy-MM-dd-HH-mm-ss-SSS} [%t] %c %L- %msg%n" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="5MB" />
+			</Policies>			
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+	</Appenders>
+	
+	<Loggers>
+		<Logger name="com.sansoft.dld" level="INFO" additivity="false">
+			<appender-ref ref="console-log" level="INFO" />
+			<appender-ref ref="rolling-log" level="INFO" />
+		</Logger>
+		
+		<Root level="INFO" additivity="false">
+			<appender-ref ref="console-log" level="INFO" />
+			<appender-ref ref="rolling-log" level="INFO" />
+		</Root>
+	</Loggers>
+</Configuration>

@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<title>Data Leakage Detection - Create Agent Page</title>
+		<style> 
+			.input_label {
+			    -moz-border-radius: 5px 0 0 5px;
+			    -webkit-border-radius: 5px 0 0 5px;
+			    background:white;
+			    border: 1px solid #CCC;
+			    border-radius: 5px 0 0 5px;
+			    border-right: 1px solid #FFF;
+			    display: inline-block;
+			    height: 41px;
+			    width: 275px;
+			    line-height: 36px;
+			    margin-right: 0;
+			    width: 150px !important;
+				
+			}
+			#contact input[type=text] {
+			    -moz-border-radius: 0 5px 5px 0;
+			    -webkit-border-radius: 0 5px 5px 0;
+			    background: #FFF;
+			    border: 1px solid #CCC;
+			    border-radius: 0 5px 5px 0;
+			    color: #333;
+			    font: 13px/1.6 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+			    height: 46px;
+			    line-height: 36px;
+			    margin: 0 8px 0 -5px;
+			    outline: none;
+			    padding: 0 3px;
+			    width: 300px;
+			}			
+			.user label {
+			    background: url('image/13.jpg') 15px center no-repeat;
+				}
+			.user1 label {
+			    background: url('image/11.png') 15px center no-repeat;
+				}
+			.user2 label {
+			    background: url('image/12.jpg') 15px center no-repeat;
+				}
+			
+			label {
+			    display: block;
+			    height: 36px;
+			    line-height: 36px;
+			    padding: 0 0 0 30px;
+			}
+		</style> 
+	</head>
+	<body>
+		<img src="image/16.png" style="float:right; cursor:pointer" "margin-right:2px" value="Home" onclick="window.location.href='distributerpage.html'" >
+		<br>
+		<center>
+			<form action="createAgent" method="post">
+				 <br>
+				 <div id="contact"> 
+	        		<div class="input_label user">
+	            		<label for="name">User Name</label>
+	         		</div> 
+	       			<input name="agentname" type="text"  id="name" class="name" size="30" value="" required>
+				</div> 
+				<br>
+				<div id="contact"> 
+					<div class="input_label user"></style> 
+	    				<label for="name">First Name</label>
+	    			</div> 
+	    			<input name="firstname" type="text" id="name" class="name" size="30" value="" required> 
+				</div><br> 
+				<div id="contact"> 
+	        		<div class="input_label user"> 
+	            		<label for="name">Last Name</label>
+	            	</div> 
+	        		<input name="lastname" type="text" id="name" class="name" size="30" value="" required> 
+	    		</div><br> 
+				<div id="contact"> 
+	        		<div class="input_label user1"> 
+	            		<label for="name">Email-id</label>
+	         		</div> 
+	        		<input name="emailid" type="text" id="name" class="name" size="30" value="" required> 
+				</div><br> 
+				<div id="contact"> 
+	        		<div class="input_label user2"> 
+	            		<label for="name">Phone No</label>
+	        		</div> 
+	        		<input name="phonenumber" type="text" id="name" class="name" size="30" value="" maxlength="10" required> 
+				</div>
+				<br><br>			
+				<input id="t1" type="submit" style="margin-left:350px;"  value="Register">
+				
+			</form>
+		</center>
+	</body>
+</html>

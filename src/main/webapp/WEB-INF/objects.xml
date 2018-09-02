@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<bean id="loginDAO" class="com.sansoft.dld.dao.LoginDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="agentDAO" class="com.sansoft.dld.dao.AgentDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="filesDAO" class="com.sansoft.dld.dao.FilesDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="detectorDAO" class="com.sansoft.dld.dao.DetectorDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="gson" class="com.google.gson.Gson">
+	</bean>
+	<bean id="jsonUtil" class="com.sansoft.dld.util.JsonUtil">
+		<property name="gson" ref="gson"></property>
+	</bean>
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="username" value="meganathanlosser@gmail.com" />
+		<property name="password" value="MegaMca15" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="mailUtil" class="com.sansoft.dld.util.MailUtil">
+		<property name="mailSender" ref="mailSender" />
+	</bean>
+</beans>

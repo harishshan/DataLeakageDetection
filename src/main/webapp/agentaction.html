@@ -1,0 +1,33 @@
+<html>
+<head>
+<script src="js/angular.min.js"></script>
+<script src="js/app.js"></script>
+<link rel="stylesheet" type="text/css" href="css/css.css">
+<title>Data Leakage Detection - Agent Action Page</title>
+</head>
+
+<body>
+<img src="image/16.png" style="float:right; cursor:pointer" "margin-right:2px" value="Home" onclick="window.location.href='distributerpage.html'" >
+<table ng-app = "mainApp" ng-controller = "agentListController">
+  <tr>
+    <th>Agent Name</th>
+    <th>Agent firstname</th>
+    <th>Agent lastname</th>
+	<th>Agent Phone No</th>
+	<th>Agent Email ID</th>
+	<th>Action</th>   
+  </tr>
+  <tr ng-repeat = "agent in agentList">
+    <td>{{agent.agentname}}</td>
+    <td>{{agent.firstname}}</td>
+	<td>{{agent.lastname}}</td>
+	<td>{{agent.phonenumber}}</td>
+	<td>{{agent.emailid}}</td>
+	<td>
+		<input id="t2" type="button" value="Activate" ng-click="activate($index);" ng-hide="agent.active">
+		<input id="t3" type="button" value="De-Activate" ng-click="deactivate($index);" ng-show="agent.active">
+	</td>
+  </tr>
+</table>
+</body>
+</html>
